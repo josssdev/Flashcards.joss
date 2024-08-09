@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <h1>Flashcards</h1>
+        <form id="flashcard-form">
+            <input type="text" id="question-input" placeholder="Introducir pregunta" required>
+            <input type="text" id="answer-input" placeholder="Introducir respuesta" required>
+            <button type="submit">Añadir Flashcard</button>
+        </form>
+        
+        <button class="button" id="start-presentation">Iniciar presentación</button>
+        
+        <div class="flashcard-container" id="flashcard-container">
+            <!-- Flashcards will be dynamically added here -->
+        </div>
+    </div>
+
+    <div id="presentation-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close-button">&times;</span>
+            <div id="presentation-question" class="presentation-question"></div>
+            <div id="presentation-answer" class="presentation-answer"></div>
+            <button class="btn-23" id="next-flashcard">
+                <span class="text">NEXT</span>
+                <span aria-hidden="" class="marquee">NEXT</span> </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+     
+    
+    
+
+</body>
+</html>
