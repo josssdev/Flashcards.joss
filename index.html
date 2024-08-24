@@ -5,40 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flashcards</title>
     <link rel="stylesheet" href="styles.css">
+    
     <link rel="icon" href="icon.png" type="image/png">
 </head>
 <body>
     <div class="container">
         <h1>Flashcards</h1>
+
+        <!-- Formulario para crear flashcards -->
         <form id="flashcard-form">
+            <input type="text" id="title-input" placeholder="Introducir título" required>
             <input type="text" id="question-input" placeholder="Introducir pregunta" required>
             <input type="text" id="answer-input" placeholder="Introducir respuesta" required>
             <button type="submit">Añadir Flashcard</button>
+            
         </form>
+
         
+
+
+
+        <!-- Presentacion -->
         <button class="button" id="start-presentation">Iniciar presentación</button>
+ 
+
+        <!-- Buscador de flashcards -->
+        <input type="text" id="search-input" class="input" placeholder="Buscar flashcards...">
+
+        
         
         <div class="flashcard-container" id="flashcard-container">
             <!-- Flashcards will be dynamically added here -->
         </div>
     </div>
 
-    <div id="presentation-modal" class="modal">
+    <!-- Modal para la presentación de flashcards -->
+    <div id="presentation-modal" style="display: none;">
         <div class="modal-content">
-            <span id="close-modal" class="close-button">&times;</span>
-            <div id="presentation-question" class="presentation-question"></div>
-            <div id="presentation-answer" class="presentation-answer"></div>
-            <button class="btn-23" id="next-flashcard">
-                <span class="text">NEXT</span>
-                <span aria-hidden="" class="marquee">NEXT</span> </button>
+            <h2 id="presentation-title"></h2>
+            <p id="presentation-question"></p>
+            <p id="presentation-answer" style="display: none;"></p>
+            <button id="next-flashcard">Siguiente</button>
+            <button id="close-modal">Cerrar</button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    
 
-     
-    
-    
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 </body>
 </html>
